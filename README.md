@@ -38,6 +38,8 @@ A command should exist to toggle the date visibility.
 The "true" line should be revealed if you are in insert mode and your cursor is
 placed over it.
 
+Consider: `((x )?(?:\d{4}-\d{2}-\d{2} ){0,2}(?:\+\w+ )*)(?=\+)`
+
 
 ### Sorting
 
@@ -77,6 +79,12 @@ In terms of implementation, you'd probably want to sort the document and then
 iterate through, inserting just such a label immediately before any line with
 todo content (e.g., "Place reservation") where the preceding line does not have
 the *exact* same leading projects.
+
+
+### Todo Creation
+
+You should be able to assign leading projects to a new todo (as well as adding a
+date) by indenting them and running specified command.
 
 
 ### Filtering
